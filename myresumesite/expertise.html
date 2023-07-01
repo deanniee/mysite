@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專長網頁</title>
+    <!--連結expertise.css-->
+    <link rel="stylesheet" href="css/expertise.css">
+</head>
+<body>
+
+    <!--loading加載中頁面的齒輪-->
+    <div id="progress">
+        <div class="loading">
+            <img src="css/gear.png" alt="loading">
+        </div>
+    </div>
+    
+    <h1>MY SKILLS</h1>
+    
+
+
+    <div id="i01"><img class="item" src="html.png" width="100px" height="auto">html</div>
+    <div id="i02"><img class="item" src="css.png" width="100px" height="auto">css</div>
+    <div id="i03"><img class="item" src="js.png" width="100px" height="auto">js</div>
+    <div id="i04"><img class="item" src="php.png" width="100px" height="auto">php</div>
+    <div id="i05"><img class="item" src="python.png" width="100px" height="auto">python</div>
+    <div id="i06"><img class="item" src="c.png" width="100px" height="auto">c/c++</div>
+    <div id="i07"><img class="item" src="yolo.png" width="100px" height="auto">yolov5</div>
+    <div id="i08"><img class="item" src="mysql.png" width="100px" height="auto">mysql</div>
+    <div id="i09"><img class="item" src="mac.png" width="90px" height="90px">mac</div>
+    <div id="i10"><img class="item" src="windows.png" width="90px" height="80px">windows</div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>//專長圖片隨滑鼠轉動的動作設置
+        document.addEventListener('mousemove',e => {
+            const item = document.querySelectorAll(".item")
+
+            const mouseX = e.clientX
+            const mouseY = e.clientY
+
+            item.forEach(sqr => {
+                const sqrX = sqr.offsetLeft
+                const sqrY = sqr.offsetTop
+
+                const diffX = mouseX -sqrX
+                const diffY = mouseY -sqrY
+
+                const radians = Math.atan2(diffY,diffX)
+
+                const angle = radians * 180 / Math.PI
+
+                sqr.style.transform = `rotate(${angle}deg)`
+            })
+        })
+    </script>
+
+
+
+
+
+     <!--漢堡選單-->
+     <nav class="nav-box">
+        <input type="checkbox" id="menu">
+        <label for="menu" class="line">
+           <img class="menu" src="ham.png"  width="40"; height="40";>
+        </label>
+        <div class="menu-list">
+           <ul>
+               <li><a class="list" href="index.html">首頁 index</a></li>
+               <li><a class="list" href="auto.html">自傳 auto</a></li>
+               <li><a class="list" href="works.html">作品 works</a></li>
+               <li><a class="list" href="contact.html">聯繫 contact</a></li>
+           </ul>
+      </div>
+    </nav>
+
+    <!--跟隨鼠標的齒輪圖片-->
+    <div class="img"></div>
+    
+</body>
+<script src="css/style.js"></script><!--連結.js，齒輪追蹤鼠標的動作-->
+</html>

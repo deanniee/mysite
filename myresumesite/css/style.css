@@ -1,0 +1,230 @@
+
+/*可愛的英文字型*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
+
+body {
+  background-image: url("index背景.jpeg");
+  background-size:100% 100%;
+    background-repeat: no-repeat;/*背景圖不重複*/
+    background-position: center center;
+    background-attachment:fixed;
+    background-size: cover;
+  margin: 0;
+  font-family: 'Amatic SC', cursive;
+  letter-spacing: 1px;/*文字間距*/
+  color: #333;
+  line-height: 1.4;/*行高*/
+  text-align: center;
+}
+
+
+a {/*超連結設定*/
+  font-family: 'Amatic SC', cursive;
+  text-decoration: none;
+}
+
+
+
+/* primary */
+.primary-content {/*中間部分*/
+  /*background-image: url('headerimg.jpg');*/
+  /*background-color:	saddlebrown;*/
+  display: flex;/*資料流向*/
+  justify-content: center;/*居中排列*/
+  align-items: center;/*項目對齊*/
+  padding-top: 1px;
+  padding-bottom: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.wrapper-primary-text {/*介紹文字的百分比*/
+  width: 50%;
+}
+
+
+/*index.html*/
+.section__title {/*中間的標題*/
+  font-family: 'Amatic SC', cursive;
+  font-weight: unset;/*文字的粗細*/
+  color:#e8e19c;
+  letter-spacing: 1px; /*字的間距*/
+  line-height: 1.2;/*文字的行高*/
+}
+
+.primary__title {/*中間的標題文字 大小設定*/
+  font-size: 80px;
+  margin-bottom: 50px;
+}
+
+.primary__title > span {/*特殊文字設定*/
+  color:#c2c2b1;
+  text-shadow: 0 0 0.2em #E0FFFF; /*文字周圍螢光*/
+}
+
+.primary__text {/*中間的小內容文字*/
+  margin-bottom: 25px;
+  font-size: 30px;
+  
+  color:#E6E6FA;
+  text-shadow:#181801 0.1em 0.1em 0.2em; /*內容小文字陰影*/
+}
+
+.link-button {/*中間的按鈕*/
+  display: inline-block;  /*不可設定長寬，按鈕的寬高由他的內容撐開*/
+  letter-spacing: 3px;/*文字間距離*/
+  background-color: #000;
+  color: white;
+  border-radius: 3px;/*圓角*/
+  padding: 10px 20px;
+}
+
+.link-button:hover {/*中間按鈕的反白設定*/
+  background-color: wheat;
+  color: black;
+  transform: scale(1.6);/*按鈕放大設定*/
+  transition: all 1s;
+}
+
+.primary__link-button {
+  margin-bottom: 40px;
+}
+
+
+/*rwd*/
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  /*按鈕大小設定*/
+  .link-button{
+    font-size: 15px;
+    display: inline-block;
+    padding: 9px 19px;
+  }
+  /*加載網頁的齒輪*/
+  .loading img{
+    width: 120px;
+    height: 120px;
+  }
+  .primary-content {
+    padding-bottom: 0;
+  }
+
+  .wrapper-primary-text {
+    width: 50%;
+    padding-bottom: 50px;
+  }
+  .primary__text{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .primary__title {
+    font-size: 60px;
+  }
+  .wrapper-content{
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*按鈕的大小*/
+  .link-button{
+    font-size: 5px;
+    display: inline-block;
+    padding: 7px 12px;
+  }
+  /*加載網頁的齒輪*/
+  .loading img{
+    width: 90px;
+    height: 90px;
+  }
+  .primary-content {
+    flex-direction: column;
+    /*padding-bottom: 50%;*/
+    padding-top: 5px;
+  }
+  .wrapper-primary-text {
+    width: 90%;
+  }
+  .primary__text{
+    font-size: 18px;
+  }
+
+  .primary__title {
+    font-size: 48px;
+  }
+  .primary__link-button{
+    display: inline-block;  
+  letter-spacing: 1px;/*文字間距離*/
+   
+  }
+  .wrapper-content{
+    margin-top: 20%;
+  }
+
+
+}
+
+
+
+/*齒輪圖片設定*/
+
+.img{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-image: url('gear.png');
+  background-size: cover;
+}
+
+/*加載中頁面*/
+#progress{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 10;
+  background-color:#24313e;
+}
+#progress .loading{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 0;
+  top:0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  /*轉一圈的秒數*/
+  animation: loading 2s infinite linear;
+  -webkit-animation: loading 2s infinite linear;
+}
+/*loading加載中轉圈圈動作*/
+@keyframes loading {
+  0%{
+      transform: rotate(0deg);/*旋轉角度起始*/
+  }
+  100%{
+      transform: rotate(360deg);/*旋轉角度結束*/
+  }
+}
+@-webkit-keyframes loading {
+  0%{
+      -webkit-transform: rotate(0deg);
+  }
+  100%{
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品</title>
+    <link rel="stylesheet" href="css/works.css">
+</head>
+<body>
+
+    <!--loading加載中頁面的齒輪-->
+    <div id="progress">
+        <div class="loading">
+            <img src="css/gear.png" alt="loading">
+        </div>
+    </div>
+    
+    <h1>WORKS</h1>
+    <div class="a1">
+        <p class="a"><span>智慧公共圖書館座位辨識管理系統<br><br></span>
+            使用YOLO v5訓練person、chair的辨識模型。<br>系統將當前的總座位數、使用人數、剩餘空位數存入資料庫中，並在網頁內即時顯示。<br>系統的準確率為95.7%。
+        </p>
+        <img class="c"  src="libraryseat.jpeg" width="400" height="250">
+        <video class="b" src="demo.mp4" width="400" height="315" controls></video>
+        
+    </div>
+
+
+    <!--漢堡選單-->
+    <nav class="nav-box">
+        <input type="checkbox" id="menu">
+        <label for="menu" class="line">
+           <img class="menu" src="ham.png"  width="40"; height="40";>
+        </label>
+        <div class="menu-list">
+           <ul>
+               <li><a class="list" href="index.html">首頁 index</a></li>
+               <li><a class="list" href="auto.html">自傳 auto</a></li>
+               <li><a class="list" href="expertise.html">專長 skill</a></li>
+               <li><a class="list" href="contact.html">聯繫 contact</a></li>
+           </ul>
+      </div>
+    </nav>
+    
+    <!--跟隨鼠標的齒輪圖片-->
+    <div class="img"></div>
+
+    
+
+
+</body>
+
+<script src="css/style.js"></script>
+
+
+</html>
+
+
